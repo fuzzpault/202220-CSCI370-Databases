@@ -1,6 +1,15 @@
 <?php
 	include('db.php');
 
+	// SQL injection example
+	// The query below is vulnerable to SQL injection
+	// attacks.
+
+	// Here is an example title input that will drop a table:
+	// a","a");DROP TABLE movies;
+
+	// See newMovie.php for the fix - use bindValue!
+	
 	if(isset($_GET['title']) && isset($_GET['rating'])){
 		$sql = "INSERT INTO movies (title, rating) ".
 		"VALUES (\"" . $_GET['title'] . "\",\"" .
