@@ -5,6 +5,8 @@
 
 <body>
 
+<?php include("menu.html"); ?>
+
 <?php
 	include('db.php');
 
@@ -16,7 +18,7 @@
 	}catch(Exception $e){
 		echo "Error:", $e;
 	}
-	echo "<table border=\"1\">";
+	echo "<table border=\"1\">\n";
 	while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 		echo '<tr>';
 		echo '<td>',$row['rating'],"</td>\n";

@@ -3,11 +3,11 @@
 
 	if(isset($_GET['title']) && isset($_GET['rating'])){
 		$sql = "INSERT INTO movies (title, rating) ".
-		"VALUES (?, ?);";
+		"VALUES (\"" . $_GET['title'] . "\",\"" .
+		$_GET['rating'] . "\");";
 
+		echo $sql;
 		$statement = $pdo->prepare($sql);
-		$statement->bindValue(1, $_GET['title']);
-		$statement->bindValue(2, $_GET['rating']);
 		try{
 			$ret = $statement->execute();
 		}catch(Exception $e){
