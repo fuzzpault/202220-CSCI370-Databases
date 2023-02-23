@@ -59,5 +59,10 @@
 	echo '</table>';
 ?>
 
+<?php
+	include('views.php');
+	
+?>
+
 </body>
 </html>

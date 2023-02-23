@@ -24,7 +24,7 @@
 <body>
 
 	<?php include("menu.html"); ?>
-	
+
 	<form method="GET">
 		<label>Title:</label><input type="text" name="title"><br>
 		<label>Rating:</label><input type="text" name="rating"><br>
@@ -47,6 +47,10 @@
 	echo "There are ", $row[0], " rows in the table";
 ?>
 
+<?php
+	include('views.php');
+	
+?>
 
 </body>
 </html>

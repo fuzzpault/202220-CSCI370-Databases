@@ -1,5 +1,5 @@
 -- MySQL setup file
--- Password: bblQ8b6dI4DB
+-- Password: UuxmeDVHK7b7
 
 DROP DATABASE IF EXISTS ticketmaster;
 CREATE DATABASE ticketmaster;
@@ -13,6 +13,22 @@ CREATE TABLE movies (
 	director VARCHAR(100)
 );
 
+CREATE TABLE venue (
+	id INTEGER PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(100),
+	city VARCHAR(100)
+);
+
+CREATE TABLE showing (
+	movieId INTEGER,
+	venueID INTEGER
+);
+
+CREATE TABLE visit(
+	url VARCHAR(50) PRIMARY KEY,
+	viewCount INTEGER DEFAULT 0
+);
+
 -- Other table definitions here
 
 -- Starter data
@@ -23,4 +39,18 @@ INSERT INTO movies (title, rating, views, director) VALUES
 ("Office Space", "G", 123000000, "John Snow"),
 ("Avatar", "R", 45, "James Cameron"),
 ("The Bee Movie", "G", 5, "Michael Bay")
+;
+
+INSERT INTO venue (name,city) VALUES
+("AMC", "Cincinnati"),
+("AMC", "Indianapolis"),
+("Regal", "Indianapolis")
+;
+
+
+INSERT INTO visit (url) VALUES
+("/index.php"),
+("/analyze.php"),
+("/newMovie.php"),
+("/delMovie.php")
 ;

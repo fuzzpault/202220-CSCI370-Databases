@@ -31,5 +31,11 @@
 ?>
 
 <h1>it works</h1>
+
+<?php
+	include('views.php');
+	
+?>
+
 </body>
 </html>

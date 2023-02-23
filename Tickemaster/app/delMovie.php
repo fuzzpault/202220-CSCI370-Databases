@@ -74,5 +74,10 @@
 	}
 	?>
 
+<?php
+	include('views.php');
+	
+?>
+I'm here.
 </body>
 </html>
