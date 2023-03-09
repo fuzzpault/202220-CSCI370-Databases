@@ -21,7 +21,9 @@ CREATE TABLE venue (
 
 CREATE TABLE showing (
 	movieId INTEGER,
-	venueID INTEGER
+	venueId INTEGER,
+	FOREIGN KEY (movieId) REFERENCES movies(id),
+	FOREIGN KEY (venueId) REFERENCES venue(id)
 );
 
 CREATE TABLE visit(
