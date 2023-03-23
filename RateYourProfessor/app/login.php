@@ -36,6 +36,7 @@
 				$message .= "Welcome back";
 				$_SESSION['email'] = $_GET['email'];
 				$_SESSION['id'] = $row['id'];
+				header("Location: /");  // This redirects on successful login.
 			}else{
 				$error .= "Password incorrect";
 			}
@@ -84,7 +85,7 @@
 
 <hr>
 <h2>New User</h2>
-<form method="GET">
+<form method="GET" action="/login.php">
 	<label>Email:</label><input type="text" name="new_email"><br>
 	<label>Password:</label><input type="password" name="new_password"><br>
 	<input type="submit" value="Create account">
