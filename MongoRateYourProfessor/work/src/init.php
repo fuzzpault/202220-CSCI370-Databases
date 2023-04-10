@@ -8,7 +8,11 @@
 	$col->insertMany($doc);
 
 	$col = $db->professor;
-	$doc = [["_id"=>"Dr. Strange"],["_id"=>"Dr. Answers"],["_id"=>"Dr. Bob"],["_id"=>"Dr. Pepper"],["_id"=>"Mr.Pib"]];
+	$doc = [["_id"=>"Dr. Strange"],
+			["_id"=>"Dr. Answers"],
+			["_id"=>"Dr. Bob"],
+			["_id"=>"Dr. Pepper"],
+			["_id"=>"Mr.Pib"]];
 	$col->insertMany($doc);
 
 	$col = $db->user;

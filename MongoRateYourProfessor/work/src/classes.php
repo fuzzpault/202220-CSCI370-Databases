@@ -84,8 +84,8 @@
 
 <?php
 	$col = $db->professor;
-	$result = $col->find();
-	echo '<table>';
+	$result = $col->find()
+	echo '<table>'
 	foreach($result as $class){
 		echo "<tr><td>" . $class["_id"] . '</td></tr>';
 	}
