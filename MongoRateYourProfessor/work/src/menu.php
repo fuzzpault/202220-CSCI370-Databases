@@ -17,7 +17,7 @@
 <?php
 	if(isset($_SESSION['email']) && strpos($_SESSION['email'], '.edu') !== false){
 		echo '<td>';
-		echo '<a href="classes.php">Admin</a>';
+		echo '<a href="admin.php">Admin</a>';
 		echo '</td>';
 	}
 ?>

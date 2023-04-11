@@ -74,7 +74,7 @@
 
 <hr>
 <h2>New Class</h2>
-<form method="GET" action="/classes.php">
+<form method="GET">
 	<label>Class Name:</label><input type="text" name="new_class"><br>
 	<input type="submit" value="Create class">
 </form>
@@ -84,8 +84,8 @@
 
 <?php
 	$col = $db->professor;
-	$result = $col->find()
-	echo '<table>'
+	$result = $col->find();
+	echo '<table>';
 	foreach($result as $class){
 		echo "<tr><td>" . $class["_id"] . '</td></tr>';
 	}
@@ -94,7 +94,7 @@
 
 <hr>
 <h2>New Professor</h2>
-<form method="GET" action="/classes.php">
+<form method="GET" >
 	<label>Professor Name:</label><input type="text" name="new_professor"><br>
 	<input type="submit" value="Add Professor">
 </form>
