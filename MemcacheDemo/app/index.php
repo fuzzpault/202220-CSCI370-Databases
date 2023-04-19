@@ -18,7 +18,7 @@
       }
 
       if(isset($_GET['key'])){
-        $mem->set($_GET['key'], $_GET['value']);
+        $mem->set($_GET['key'], $_GET['value'], $_GET['time']);
       }
 
     if( $mem->add("mystr","this is a memcache test!",3600)){
@@ -30,11 +30,11 @@
      //echo "stats: <br>", var_dump($mem->getStats());
 
     $mem->add("counter",0);
-    /*$curvalue = $mem->get("counter");
+    $curvalue = $mem->get("counter");
     if($curvalue !== FALSE){
       $mem->set("counter", $curvalue + 1);
-    };*/
-    $mem->increment("counter");
+    };
+    //$mem->increment("counter");
 
     echo "Counter: ". $mem->get("counter"). "<br>";
     ?>
@@ -46,6 +46,8 @@
       <input type="text" name="key" /><br>
       <label>Value:</label>
       <input type="text" name="value" /><br>
+      <label>Timeout:</label>
+      <input type="text" name="time" /><br>
       <input type="submit" value="Submit" />
     </form>
   </body>
